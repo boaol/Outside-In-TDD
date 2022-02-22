@@ -9,8 +9,8 @@ describe('Listing Restaurants', () => {
       method: 'GET',
       url: 'https://outside-in-dev-api.herokuapp.com/KXPQJunQouNkzJwgIfQrAIbF1do7oESx/restaurants',
       response: [
-        {id: 1, name: pastaPlace},
-        {id: 2, name: saladPlace},
+        {id: 1794, name: pastaPlace},
+        {id: 1795, name: saladPlace},
       ],
     });
 
