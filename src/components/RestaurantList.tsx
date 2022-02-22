@@ -1,7 +1,10 @@
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import React, {useEffect} from 'react';
 import {connect, RootStateOrAny} from 'react-redux';
-import {Restaurant} from '../types';
 import {loadRestaurants} from '../store/restaurants/actions';
+import {Restaurant} from '../types';
 
 type Props = {
   loadRestaurants: () => void;
@@ -14,11 +17,13 @@ export const RestaurantList = ({loadRestaurants, restaurants}: Props) => {
   }, [loadRestaurants]);
 
   return (
-    <ul>
+    <List>
       {restaurants.map(restaurant => (
-        <li key={restaurant.id}>{restaurant.name}</li>
+        <ListItem key={restaurant.id}>
+          <ListItemText>{restaurant.name}</ListItemText>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
